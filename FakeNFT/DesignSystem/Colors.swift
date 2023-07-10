@@ -58,3 +58,37 @@ extension UIColor {
     static let customYellow = UIColor(red: 1.00, green: 0.94, blue: 0.05, alpha: 1.00)
     
 }
+import UIKit
+
+enum Icons: String {
+    case trash = "trash-icon"
+    case successPay = "success-pay-status"
+    case failurePay = "failure-pay-status"
+    case sort = "sort-icon"
+}
+
+extension UIImage {
+    static func asset(_ icon: Icons) -> UIImage {
+        UIImage(named: icon.rawValue) ?? UIImage()
+    }
+}
+
+
+enum ColorAsset: String {
+    case black
+    case blackUniversal
+    case blue
+    case green
+    case gray
+    case lightGray
+    case red
+    case white
+    case whiteUniversal
+    case yellow
+}
+
+extension UIColor {
+    static func asset(_ colorAsset: ColorAsset) -> UIColor {
+        UIColor(named: colorAsset.rawValue) ?? .clear
+    }
+}
