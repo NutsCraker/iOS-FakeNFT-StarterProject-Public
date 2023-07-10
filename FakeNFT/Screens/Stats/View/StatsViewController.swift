@@ -1,47 +1,14 @@
+
 import UIKit
 
-final class StatsViewController: UIViewController {
-    
-    private let presenter: StatsPresenterProtocol
-    
-    // MARK: - Life Cycle
-    
-    init(presenter: StatsPresenterProtocol) {
-        self.presenter = presenter
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+final class StatsViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupView()
-        setConstraints()
-    }
-    
-    // MARK: - Setup UI
-    
-    private func setupView() {
-        view.backgroundColor = .appWhite
-        title = "Статистика"
-    }
-}
 
-// MARK: - StatsViewProtocol
+        view.backgroundColor = .asset(.white)
+        navigationBar.tintColor = .asset(.black)
 
-extension StatsViewController: StatsViewProtocol {
-    
-}
-
-// MARK: - Setting Constraints
-
-extension StatsViewController {
-    private func setConstraints() {
-        NSLayoutConstraint.activate([
-            
-        ])
+        let rootController = StatPageViewController()
+        pushViewController(rootController, animated: false)
     }
 }

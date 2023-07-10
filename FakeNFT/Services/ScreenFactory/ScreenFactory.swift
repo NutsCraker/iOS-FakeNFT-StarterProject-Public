@@ -24,10 +24,13 @@ final class ScreenFactory: ScreenFactoryProtocol {
     }
     
     func makeStatsScreen() -> UIViewController {
-        let presenter = StatsPresenter()
-        let vc = StatsViewController(presenter: presenter)
-        presenter.view = vc
-        return vc
+        //let presenter = StatsPresenter()
+       // let vc = StatsViewController(presenter: presenter)
+       // presenter.view = vc
+        return StatPageViewController()
+        
+        //let rootController = StatPageViewController()
+            //pushViewController(rootController, animated: false)
     }
     
 }

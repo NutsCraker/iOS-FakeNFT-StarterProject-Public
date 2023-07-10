@@ -12,4 +12,5 @@ struct Config {
     static let userAgreementUrl = "https://www.vl.ru"
     static let usersSortTypeKey = "statistic:sortKey"
     static let cartSortKey = "cart:sortKey"
+    static let userId = "3"
 }

@@ -13,6 +13,7 @@ final class StatUserPageModel {
 
     func getUser(userId: String, completion: @escaping (Result<User, Error>) -> Void) {
         let request = Request(endpoint: URL(string: Config.baseUrl + "/users" + "/\(userId)"), httpMethod: .get)
+        print (userId)
         defaultNetworkClient.send(request: request, type: User.self, onResponse: completion)
     }
 }
