@@ -45,8 +45,6 @@
 		3FC8C39729D24D9D0081F015 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8C39629D24D9D0081F015 /* .swiftlint.yml */; };
 		881425112A52C08300AADB89 /* StatUserPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881425102A52C08300AADB89 /* StatUserPageModel.swift */; };
 		881425132A52E0B300AADB89 /* Models&Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881425122A52E0B300AADB89 /* Models&Structs.swift */; };
-		881425152A52E5AA00AADB89 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881425142A52E5AA00AADB89 /* CurrencyService.swift */; };
-		881425182A52E71E00AADB89 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881425172A52E71E00AADB89 /* Protocols.swift */; };
 		8814251A2A52E7B800AADB89 /* NFTModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881425192A52E7B800AADB89 /* NFTModels.swift */; };
 		8814251C2A52E97500AADB89 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814251B2A52E97500AADB89 /* Config.swift */; };
 		8828C27F2A5C3AE30008C875 /* StatUserPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828C27E2A5C3AE30008C875 /* StatUserPageViewModel.swift */; };
@@ -124,8 +122,6 @@
 		3FC8C39629D24D9D0081F015 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		881425102A52C08300AADB89 /* StatUserPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatUserPageModel.swift; sourceTree = "<group>"; };
 		881425122A52E0B300AADB89 /* Models&Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models&Structs.swift"; sourceTree = "<group>"; };
-		881425142A52E5AA00AADB89 /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
-		881425172A52E71E00AADB89 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		881425192A52E7B800AADB89 /* NFTModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTModels.swift; sourceTree = "<group>"; };
 		8814251B2A52E97500AADB89 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8828C27E2A5C3AE30008C875 /* StatUserPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatUserPageViewModel.swift; sourceTree = "<group>"; };
@@ -407,10 +403,7 @@
 		3F6806C929CBBCAF00B4F915 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				881425172A52E71E00AADB89 /* Protocols.swift */,
-				3F6806D829CC979D00B4F915 /* Network */,
 				881425122A52E0B300AADB89 /* Models&Structs.swift */,
-				881425142A52E5AA00AADB89 /* CurrencyService.swift */,
 				881425192A52E7B800AADB89 /* NFTModels.swift */,
 				8814251B2A52E97500AADB89 /* Config.swift */,
 			);
@@ -437,13 +430,6 @@
 				3F6806D429CBBEC700B4F915 /* NetworkTask.swift */,
 			);
 			path = NetworkClient;
-			sourceTree = "<group>";
-		};
-		3F6806D829CC979D00B4F915 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		3FC8C38F29D245250081F015 /* Requests */ = {
@@ -679,7 +665,6 @@
 				8828C28C2A5C47AF0008C875 /* RatingView.swift in Sources */,
 				88E07DCA2A59E57600600529 /* UserViewCell.swift in Sources */,
 				0AAF02E42A52967C00924CE0 /* ProfileViewController.swift in Sources */,
-				881425152A52E5AA00AADB89 /* CurrencyService.swift in Sources */,
 				0AAF03062A529E9D00924CE0 /* CartViewProtocol.swift in Sources */,
 				8814251A2A52E7B800AADB89 /* NFTModels.swift in Sources */,
 				88E07DD22A59E64600600529 /* StatPageViewModel.swift in Sources */,
@@ -707,7 +692,6 @@
 				3F6806D329CBBE9600B4F915 /* NetworkRequest.swift in Sources */,
 				88E07DD02A59E61500600529 /* StatPageModel.swift in Sources */,
 				881425132A52E0B300AADB89 /* Models&Structs.swift in Sources */,
-				881425182A52E71E00AADB89 /* Protocols.swift in Sources */,
 				8814251C2A52E97500AADB89 /* Config.swift in Sources */,
 				8828C2842A5C3C050008C875 /* StatUserCollectionPageModel.swift in Sources */,
 				0AAF02F62A529AF100924CE0 /* CatalogPresenter.swift in Sources */,
