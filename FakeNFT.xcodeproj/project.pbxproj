@@ -426,7 +426,6 @@
 		3F6806CF29CBBDB100B4F915 /* NetworkClient */ = {
 			isa = PBXGroup;
 			children = (
-				8828C2972A5C5A080008C875 /* Requests */,
 				3F6806D029CBBE6B00B4F915 /* NetworkClient.swift */,
 				8828C2982A5D6E1B0008C875 /* NetworkClient2.swift */,
 				3F6806D229CBBE9600B4F915 /* NetworkRequest.swift */,
@@ -462,13 +461,6 @@
 				8828C2892A5C3D3D0008C875 /* StatNFTCell.swift */,
 			);
 			path = StatUserCollectioon;
-			sourceTree = "<group>";
-		};
-		8828C2972A5C5A080008C875 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Requests;
 			sourceTree = "<group>";
 		};
 		88E07DCD2A59E5C600600529 /* UserView */ = {

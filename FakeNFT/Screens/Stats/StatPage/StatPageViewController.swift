@@ -28,14 +28,16 @@ final class StatPageViewController: UIViewController {
         viewModel.onChange = { [weak self] in
             self?.updateTable()
         }
-        viewModel.onError = { [weak self] error, retryAction in
+      
+  viewModel.onError = { [weak self] error, retryAction in
             let alert = UIAlertController(title: "Ошибка при загрузке пользователей", message: error.localizedDescription, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Попробовать снова", style: .default, handler: { _ in
                 retryAction()
             }))
             self?.present(alert, animated: true, completion: nil)
         }
-        viewModel.getUsers(showLoader: showLoader)
+ 
+ viewModel.getUsers(showLoader: showLoader)
     }
     
     func updateTable() {
