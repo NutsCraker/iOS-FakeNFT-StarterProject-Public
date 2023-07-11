@@ -1,24 +1,12 @@
+//
+//  ProfileNetworkClient.swift
+//  FakeNFT
+//
+
 import Foundation
 
-enum NetworkClientError: Error {
-    case httpStatusCode(Int)
-    case urlRequestError(Error)
-    case urlSessionError
-    case parsingError
-}
-
-protocol NetworkClient {
-    @discardableResult
-    func send(request: NetworkRequest,
-              onResponse: @escaping (Result<Data, Error>) -> Void) -> NetworkTask?
-
-    @discardableResult
-    func send<T: Decodable>(request: NetworkRequest,
-                            type: T.Type,
-                            onResponse: @escaping (Result<T, Error>) -> Void) -> NetworkTask?
-}
-
-struct DefaultNetworkClient: NetworkClient {
+struct CustomNetworkClient: NetworkClient {
+    
     private let session: URLSession
     private let decoder: JSONDecoder
 
@@ -75,20 +63,10 @@ struct DefaultNetworkClient: NetworkClient {
 
     private func create(request: NetworkRequest) -> URLRequest? {
         guard let endpoint = request.endpoint else { return nil }
-        guard var components = URLComponents(url: endpoint, resolvingAgainstBaseURL: true) else { return nil }
-
-        components.queryItems = request.queryParameters?.map { key, value in
-            URLQueryItem(name: key, value: value)
-        }
-
-        guard let url = components.url else { return nil }
-
-        var urlRequest = URLRequest(url: url)
-        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var urlRequest = URLRequest(url: endpoint)
         urlRequest.httpMethod = request.httpMethod.rawValue
         urlRequest.httpBody = request.httpBody
-        urlRequest.timeoutInterval = 30.0
-
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         return urlRequest
     }
 
@@ -101,4 +79,3 @@ struct DefaultNetworkClient: NetworkClient {
         }
     }
 }
-
